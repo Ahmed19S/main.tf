@@ -1,0 +1,11 @@
+provider "aws" {
+region = "us-east-1"
+}
+resource "aws_instance" "one" {
+count = 1
+ami = "ami-068c0051b15cdb816"
+instance_type = "t2.micro"
+tags = {
+Name = "ahmed"
+}
+}
